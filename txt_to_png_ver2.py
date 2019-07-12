@@ -46,6 +46,8 @@ for ii, font_dir in enumerate(font_dir_list):
             save_location = os.getcwd() + '/{}'.format(font_name)
         # print(save_location)
         # img_resized.save(save_location + '/sample.jpg')
+            if not os.path.isdir(save_location):
+                os.mkdir(save_location)
             image.save(save_location + '/sample.png')
     #===========================================================
     if create_all:
